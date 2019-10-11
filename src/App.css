@@ -20,3 +20,83 @@
 .App-link {
   color: #09d3ac;
 }
+body{
+  background-image: url("./image/461d254f8563f8945ce3a385f289df17.jpg");
+}
+#header{
+  /* background-color:#343a40; */
+  height: 100%;
+  padding: 1px 0;
+  text-align: center;
+}
+ h2{
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f8f9fa;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+.panel{
+  width: 302px;;
+  margin: auto;
+  border: 1px solid black;   
+}
+.btn{
+  width: 100px;
+  height: 100px;
+}
+.operator{
+  height: 100px;
+}
+.box-shadow{
+  box-shadow: 3px -6px teal;
+}
+.result{
+  height: 220px;
+  width: auto;
+  background-color: #f8f9fa;
+}
+.result h1{
+  color: #6c757d;
+  font-size: 100px;
+  text-align: center;
+  margin: auto;
+  padding-top: 55px;
+}
+#player-control{
+  height: 180px;
+  margin: 50px 30px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #101013;
+  background-image: url('./image/Default_Nav[1920x1080].png');
+}
+.info{
+  color:#D0DEDD;
+}
+.play-music{
+  margin: 20px -5px;
+  color: orange;
+}
+.player{
+  width: 100%;
+}
+.play-music button,progress{
+  margin: 0 2px;
+}
+.play-music button{
+  border-style: hidden;
+  background-color:transparent;
+
+}
+.repeat-off{
+  color: white;
+}
+#probar{
+  color: white !important; 
+  background-color: red !important;
+}
+#volume-bar{
+  color: white !important; 
+  background-color: aqua !important;
+}
