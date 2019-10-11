@@ -4,11 +4,47 @@ import 'font-awesome/css/font-awesome.min.css';
 import loveyou3k from '../audio//loveyou3k.mp3'
 import yatr from '../audio//you are the reason.mp3'
 import bom from '../audio/bom.mp3'
+import lostcontrol from '../audio/lost control.mp3'
+import lily from '../audio/lily.mp3'
+import letme from '../audio//let me down slowly.mp3'
 class Player extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
             music: [
+              {
+              name: "Let me down slowly",
+              author:"Alec Benjamin",
+              lyric: `Baby, take my hand
+                      I want you to be my husband
+                      Cause you're my Iron Man
+                      And I love you three thousand`,
+              src:  letme ,
+              view: Math.round(Math.random()*10000000),
+              download: Math.round(Math.random()*1000000)
+              },
+              {
+                name: "Lily",
+                author:"Emelie Hollow ft. Alan Walker",
+                lyric: `Baby, take my hand
+                        I want you to be my husband
+                        Cause you're my Iron Man
+                        And I love you three thousand`,
+                src:  lily ,
+                view: Math.round(Math.random()*10000000),
+                download: Math.round(Math.random()*1000000)
+              },
+              {
+                name: "Lost control",
+                author:"Sorana ft.Alan Walker",
+                lyric: `Baby, take my hand
+                        I want you to be my husband
+                        Cause you're my Iron Man
+                        And I love you three thousand`,
+                src:  lostcontrol ,
+                view: Math.round(Math.random()*10000000),
+                download: Math.round(Math.random()*1000000)
+              },
               {
                 name: "Bom",
                 author:"Bom bom",
@@ -19,29 +55,29 @@ class Player extends React.Component{
                 src:  bom ,
                 view: Math.round(Math.random()*10000000),
                 download: Math.round(Math.random()*1000000)
-                },
-                {
-                    name: "I love you 3000",
-                    author:"Stephanie Poetri",
-                    lyric: `Baby, take my hand
-                            I want you to be my husband
-                            Cause you're my Iron Man
-                            And I love you three thousand`,
-                    src:  loveyou3k ,
-                    view: Math.round(Math.random()*10000000),
-                    download: Math.round(Math.random()*1000000)
-                },
-                {
-                    name: "You Are The Reason",
-                    author:"Calum Scott",
-                    lyric: `I'd climb every mountain
-                            And swim every ocean
-                            Just to be with you
-                            And fix what I've broken`,
-                    src:  yatr,
-                    view: Math.round(Math.random()*10000000),
-                    download: Math.round(Math.random()*1000000)
-                }
+              },
+              {
+                  name: "I love you 3000",
+                  author:"Stephanie Poetri",
+                  lyric: `Baby, take my hand
+                          I want you to be my husband
+                          Cause you're my Iron Man
+                          And I love you three thousand`,
+                  src:  loveyou3k ,
+                  view: Math.round(Math.random()*10000000),
+                  download: Math.round(Math.random()*1000000)
+              },
+              {
+                  name: "You Are The Reason",
+                  author:"Calum Scott",
+                  lyric: `I'd climb every mountain
+                          And swim every ocean
+                          Just to be with you
+                          And fix what I've broken`,
+                  src:  yatr,
+                  view: Math.round(Math.random()*10000000),
+                  download: Math.round(Math.random()*1000000)
+              }
             ],
             audio: new Audio(),
             select: 0,
