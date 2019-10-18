@@ -24,7 +24,7 @@ body{
   background-image: url("./image/461d254f8563f8945ce3a385f289df17.jpg");
 }
 #header{
-  /* background-color:#343a40; */
+  background-color: transparent/* #343a40 */;
   height: 100%;
   padding: 1px 0;
   text-align: center;
@@ -41,7 +41,7 @@ body{
   margin: auto;
   border: 1px solid black;   
 }
-.btn{
+.operator .btn{
   width: 100px;
   height: 100px;
 }
@@ -99,4 +99,19 @@ body{
 #volume-bar{
   color: white !important; 
   background-color: aqua !important;
+}
+.food-menu table, .panel{
+  margin-left: 30px;
+}
+.table-bordered thead tr th{
+  text-align: center;
+}
+/* Food */
+.food-menu .btn{
+  width: 30%;
+  float:right;
+  margin-right: 5px;
+}
+.food-menu table,thead{
+  /* border: 2px solid #333 */
 }

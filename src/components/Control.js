@@ -34,7 +34,7 @@ class Control extends React.Component{
           color: this.state.shadow,
       }
     return(
-      <div style= {{marginTop: "30px"}}>
+      <div style= {{margin: "5% 37% 5% 37%"}}>
           <div className="panel">
               <div className="result">
                 <h1>{this.state.number}</h1>

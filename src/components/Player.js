@@ -90,8 +90,9 @@ class Player extends React.Component{
     checkInterval = ()=>{
       if(this.interval) 
       {
-        clearInterval(this.interval);
         this.interval = false;
+        clearInterval(this.interval);
+
       }
       else {
         this.interval = setInterval(this.onCurrentTime,1000);
@@ -120,7 +121,6 @@ class Player extends React.Component{
         }
       }
       else if(nameTag === "next"){
-        this.checkInterval();
         this.autoNext();
         var playbtn = document.getElementsByName("play")[0].childNodes[0];
         playbtn.className = "fa fa-pause fa-1x";
@@ -162,7 +162,7 @@ class Player extends React.Component{
       var currentTimePlay =this.parseTime(currentTime);
       var durationTimePlay = this.parseTime(duration);
       var valueProgress = parseInt(currentTime/duration*100);
-      console.log(currentTimePlay);
+      // console.log(currentTimePlay);
       var probar = document.getElementById("probar");
       probar.value = valueProgress;
       this.setState({
@@ -191,6 +191,7 @@ class Player extends React.Component{
       return timePlay;
     }
     autoNext = ()=>{
+      //co bug khi next 
       var length = this.state.music.length;
       var {audio,select,music} = this.state;
       if(select >= length-1) select = 0;
@@ -216,11 +217,13 @@ class Player extends React.Component{
         this.state.audio.volume = value;
       }
       else if(target.id == "probar"){
-       /*  value = value*100;
+       /*  value = value*60;
         value = parseInt(value);
-        e.target.value =value;
-        this.state.audio.currentTime += value;
-        this.checkInterval(); */
+        console.log(value);
+
+        e.target.value = value;
+        this.state.audio.currentTime += this.state.audio.currentTime-value; */
+        // this.checkInterval();
       }
       
      
@@ -244,19 +247,18 @@ class Player extends React.Component{
             value="0" 
             id="probar"
             style={marginLR} 
-            style={{width: "775px",height:"10px"}}
+            style={{width: "840px",height:"10px"}}
           >
           </progress>
           <span style={{fontSize: "15px", margin:"0 10px"}}>{this.state.duration}</span>
           <button onClick={this.onClick} name="repeat"><i className="fa fa-repeat fa-1x repeat-off"></i></button>
-          <button onClick={this.onClick} name="volume"><i className="fa fa-volume-up fa-1x"></i></button>
+          <button onClick={this.onClick} name="volume" style={{marginRight:"4px"}}><i className="fa fa-volume-up fa-1x"></i></button>
           <progress 
             onClick={this.onDrag} 
             id="volume-bar" min="0" max="1" value="1" 
-            style={marginLR} style={{width: "120px",height:"10px"}}
+            style={marginLR} style={{width: "120px",height:"10px",}}
           >
           </progress>
-          
         </p>        
       </div>
     )
